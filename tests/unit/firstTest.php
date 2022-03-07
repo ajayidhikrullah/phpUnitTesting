@@ -15,13 +15,8 @@ class FirstTest extends TestCase
         // var_dump($ans);exit();
     
     $ans = $this->assertEquals($c, 20);
-    // if ($ans == True ){
-    //     return True;
-    // } else{
-    //     return False;
-    // }
-        }
-
+    }
+    
     public function testTrueAssertsToTrue(){
         $this->assertTrue(true); //assertTrue is to check if a statement is true or false.
     }
