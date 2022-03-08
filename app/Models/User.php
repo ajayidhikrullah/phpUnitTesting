@@ -40,6 +40,14 @@ class User{
     public function getEmail(){
         return $this->email;
     }
+
+    //test if email variables contains same values
+    public function getEmailVariables(){
+        return [
+            'fullName' => $this->getFullName(),
+            'email' => $this->getEmail(),
+        ];
+    }
 }
 
 

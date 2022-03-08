@@ -64,5 +64,27 @@ class UserModelTest extends TestCase{
 
   }
 
+  //confirm if email variables contains correct values.
+
+  public function testEmailVariablesContainCorrectValues(){
+    $user = new \App\Models\User;
+
+    $user->setFirstName('Dhikrullah');
+
+    $user->setLastName('Hayjay');
+
+    $user->setEmail('dhikr@teqniahub.com');
+
+    $emailVariables = $user->getEmailVariables();
+
+    $this->assertArrayHaskey('fullName', $emailVariables);
+
+    $this->assertArrayHasKey('email', $emailVariables);
+
+    $this->assertEquals($emailVariables['fullName'], 'Dhikrullah Hayjay');
+
+    $this->assertEquals($emailVariables['email'], 'dhikr@teqniahub.com');
+  }
+
 
 }
