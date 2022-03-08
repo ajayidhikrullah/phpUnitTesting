@@ -10,10 +10,17 @@ class UserModelTest extends TestCase{
 
     public function testThatWeCanGetTheFirstName(){
         $user = new \App\Models\User;
+      
         $user->setFirstName('Dhikrullah');
         // $user->getFirstName();
           $this->assertEquals($user->getFirstName(), 'Dhikrullah');
     }
 
-    // public function testThatWeCanGetTheLastName()
+    public function testThatWeGetLastName(){
+      $user = new \App\Models\User;
+
+      $user->setLastName('Hayjay');
+
+      $this->assertEquals($user->getLastName(), 'Hayjay');
+  }
 }
