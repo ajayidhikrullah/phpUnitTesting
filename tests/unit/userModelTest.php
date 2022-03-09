@@ -8,7 +8,11 @@ class UserModelTest extends TestCase{
     //what should user model do
     //get first and last name of user
 
-    public function testThatWeCanGetTheFirstName(){
+    public function setUp(): void{
+      // var_dump('1');
+    }
+            /** @test */
+    public function ThatWeCanGetTheFirstName(){
         $user = new \App\Models\User;
       
         $user->setFirstName('Dhikrullah');
@@ -85,6 +89,4 @@ class UserModelTest extends TestCase{
 
     $this->assertEquals($emailVariables['email'], 'dhikr@teqniahub.com');
   }
-
-
 }
